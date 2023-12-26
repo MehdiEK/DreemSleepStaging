@@ -142,13 +142,7 @@ class WaveletTransformer():
         :return pd.DataFrame
             Columns are new "spectral" features.
         """
-        # aggregates time related features
-        df_time = self.time_features(X)
-
-        # aggregates frequency related features
-        df_freq = self.frequency_features(X)
-
-        return df_freq.join(df_time)
+        pass
 
     def plot_cwt(self, signal, time, coefficients, frequencies, title='Continuous Wavelet Transform'):
         plt.figure(figsize=(12, 8))
